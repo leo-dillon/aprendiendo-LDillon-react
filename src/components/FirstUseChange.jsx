@@ -5,8 +5,12 @@ const FirstUseChange = () => {
     const [ letras, setLetras ] = useState([])
 
     const modificarNombre = ( event ) => {
+        console.log(letras)
+        if( !letras.includes( event.nativeEvent.data ) ){
+            setLetras( [...letras, event.nativeEvent.data] )
+        }
         setNombre( event.target.value )
-        if( !letras.includes( event.nativeEvent.data ) ) setLetras( event.nativeEvent.data )
+
     }
     return (
         <div className="flex flex-col my-4 border-1 rounded-xl p-2">
@@ -25,14 +29,16 @@ const FirstUseChange = () => {
             </div>
             <p>Palabra completa: { nombre } </p>
             { 
-                ( letras.length > 0 )
+                ( letras.length > 1 )
                 ?  
+                <>
+                    <p>Letras incluidas en tu nombre</p>
+                    {
                     letras.map( (letra, index) => (
-                        <>
-                            <p>Letras incluidas en tu nombre</p>
                             <p key={index}> { letra } </p>                    
-                        </>
                     ) )
+                    }
+                </>
                 : 
                     ""
             }
