@@ -9,7 +9,7 @@ const firstProps = "Hola!!, esta es una prop"
 function App() {
   return (
     <>
-    <div className="w-full max-w-400 mx-auto">
+    <div className="w-full max-w-400 mx-auto bg-gray-200 p-4">
       <Header />
       <FirstProps  firstProps={ firstProps } />
       <FirstUseState />
