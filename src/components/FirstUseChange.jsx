@@ -28,11 +28,12 @@ const FirstUseChange = () => {
                 />
             </div>
             <p>Palabra completa: { nombre } </p>
+            <div className="flex gap-2">
             { 
                 ( letras.length > 1 )
                 ?  
                 <>
-                    <p>Letras incluidas en tu nombre</p>
+                    <p>Letras incluidas en tu nombre</p> <br />
                     {
                     letras.map( (letra, index) => (
                             <p key={index}> { letra } </p>                    
@@ -42,6 +43,7 @@ const FirstUseChange = () => {
                 : 
                     ""
             }
+            </div>
         </div>
     )
 }
