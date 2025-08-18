@@ -4,6 +4,7 @@ import FirstProps from "./components/FirstComponents.jsx"
 import FirstUseState from "./components/FirstUseState.jsx"
 import FirstUseChange from "./components/FirstUseChange.jsx"
 import Contador from "./components/Contador.jsx"
+import TodoList from "./components/ToDoList.jsx"
 
 const firstProps = "Hola!!, esta es una prop"
 
@@ -16,6 +17,7 @@ function App() {
       <FirstUseState />
       <FirstUseChange />
       <Contador />
+      <TodoList />
     </div>
     </>
   )
