@@ -5,7 +5,6 @@ const FirstUseChange = () => {
     const [ letras, setLetras ] = useState([])
 
     const modificarNombre = ( event ) => {
-        console.log(letras)
         if( !letras.includes( event.nativeEvent.data ) ){
             setLetras( [...letras, event.nativeEvent.data] )
         }
